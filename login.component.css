@@ -1,0 +1,73 @@
+/* Center the wrapper */
+.login-container-wrapper {
+  background-image: url('https://www.shutterstock.com/image-vector/internet-digital-syber-security-technology-260nw-1518108761.jpg'); /* adjust name */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px; /* space below header */
+}
+
+/* Style the login box */
+.login-box {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Login title */
+.login-box h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Input labels and fields */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Error message */
+.error-msg {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Login button */
+.submitBtn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  background-color: #a6c8ff;
+  cursor: not-allowed;
+}

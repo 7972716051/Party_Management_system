@@ -1,0 +1,49 @@
+<!-- Wrapper for centering -->
+<div class="login-container-wrapper">
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)" novalidate>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter username"
+          name="username"
+          #username="ngModel"
+          [(ngModel)]="user.username" autocomplete="username" required/>
+        <div *ngIf="username.invalid && username.touched" style="color: red;">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          placeholder="Enter password"
+          #password="ngModel"
+          [(ngModel)]="user.password" autocomplete="current-password"
+          required/>
+        <div *ngIf="password.invalid && password.touched" style="color: red;">
+          Password is required.
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        name="btn"
+        class="submitBtn"
+        [disabled]="loginForm.invalid"
+      >
+        Login
+      </button>
+    </form>
+
+    <div class="error-msg">{{ errorMsg }}</div>
+  </div>
+</div>

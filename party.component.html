@@ -1,0 +1,49 @@
+<h2>Party List</h2>
+<table class="party-table">
+  <thead>
+    <tr>
+      <th style="display: none;">Party ID</th>
+      <th>Party ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>DOB</th>
+      <th>Gender</th>
+      <th>Occupation</th>
+      <th>Address</th>
+      <th>Contact</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let party of parties">
+      <td style="display: none;">{{ party.id }}</td>
+      <td>{{ party.partyId }}</td>
+      <td>{{ party.firstName }}</td>
+      <td>{{ party.lastName }}</td>
+      <td>{{ party.dateOfBirth | date: 'dd/MM/yyyy' }}</td>
+
+
+      <td>{{ party.genderIdentity }}</td>
+      <td>{{ party.occupation }}</td>
+      <td>{{ party.address.city }}, {{ party.address.state }}, {{ party.address.country }}</td>
+<td>
+      {{ party.contactChannel.phoneNumber }}<br />
+{{ party.contactChannel.emailAddress }}
+
+      </td>
+      <td>
+        <button type="button" (click)="onActionClick(party)">Actions</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Popup Component -->
+<app-popup
+  *ngIf="showPopup"
+  [party]="selectedParty"
+  (update)="onUpdate($event)"
+  (delete)="onDelete($event)"
+  (add)="onAdd($event)"
+  (close)="closePopup()">
+</app-popup>

@@ -1,0 +1,37 @@
+<div class="popup-overlay">
+  <div class="popup-box">
+    <h3>Add New Party</h3>
+    <form (ngSubmit)="onSave()">
+        <div class="form-scroll" >
+      <label>Firstname:</label> <input type="text" [(ngModel)]="newParty.firstName" name="firstName" placeholder="First Name" required />   
+        <label>Lastname:</label> <input type="text" [(ngModel)]="newParty.lastName" name="lastName" placeholder="Last Name" required /> 
+      <label>Birth Date:</label> <input type="date" [(ngModel)]="newParty.dateOfBirth" name="dob" required /> 
+
+      <label>Gender: </label><select [(ngModel)]="newParty.genderIdentity" name="genderIdentity" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select> <br/> 
+
+    <label>Occupation:</label> <input type="text" [(ngModel)]="newParty.occupation" name="occupation" placeholder="Occupation" required /> 
+<div>
+    <p>Address</p>
+     <label> City:</label> <input type="text" [(ngModel)]="newParty.address.city" name="city" placeholder="City" required />
+      <label> State:</label>  <input type="text" [(ngModel)]="newParty.address.state" name="state" placeholder="State" required /><br/> 
+     <label> Country:</label> <input type="text" [(ngModel)]="newParty.address.country" name="country" placeholder="Country" required /><br/> 
+</div><br/> 
+<div>
+    <p>Contact channel</p>
+      Phone: <input type="text" [(ngModel)]="newParty.contactChannel.phoneNumber" name="phoneNumber" placeholder="Phone" required />
+      Email: <input type="email" [(ngModel)]="newParty.contactChannel.emailAddress" name="email" placeholder="Email" required />
+</div>
+      <div class="button-group">
+        <button type="submit">Save</button>
+        <button type="button" (click)="onCancel()">Cancel</button>
+      </div>
+        </div>
+    </form>
+  </div>
+</div>
+
+

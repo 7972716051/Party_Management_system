@@ -1,0 +1,21 @@
+.container {
+  background-image: url('https://th.bing.com/th/id/OIP.ymR95RWkBSj-WgCKijIgpwHaFA?w=504&h=341&rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3'); /* ✅ your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  min-height: 100vh;
+  color: #fff;
+}
+
+table {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}

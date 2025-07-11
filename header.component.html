@@ -1,0 +1,31 @@
+<header class="header">
+  <!-- header.component.html -->
+<div class="welcome">
+  <span>👤</span>
+  <span>Welcome, {{ username }}</span>
+</div>
+
+
+
+
+  <nav class="navbar">
+    <div class="logo">
+      <a routerLink="/home"></a>
+     
+
+    </div>
+
+    <div class="nav-select">
+      <select (change)="onSelectChange($event)">
+        <option value="">-- Select Option --</option>
+        <option value="user">User</option>
+        <option value="party">Party</option>
+      </select>
+    </div>
+
+    <div class="auth">
+       
+      <button (click)="logout()">Logout</button>
+    </div>
+  </nav>
+
